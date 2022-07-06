@@ -2,11 +2,11 @@
 pragma solidity >=0.8.10 <0.9.0;
 
 import "forge-std/Test.sol";
-import "../src/ExampleNFT.sol";
+import "../src/KritterzNFT.sol";
 import "../src/IRenderer.sol";
 
-contract ExampleNFTTest is Test {
-    ExampleNFT private nft;
+contract KritterzNFTTest is Test {
+    KritterzNFT private nft;
 
     address private owner =
         vm.addr(uint256(keccak256(abi.encodePacked("owner"))));
@@ -14,7 +14,7 @@ contract ExampleNFTTest is Test {
         vm.addr(uint256(keccak256(abi.encodePacked("minter"))));
 
     function setUp() public {
-        nft = new ExampleNFT();
+        nft = new KritterzNFT();
         nft.transferOwnership(owner);
         vm.deal(owner, 10 ether);
         vm.deal(minter, 10 ether);
