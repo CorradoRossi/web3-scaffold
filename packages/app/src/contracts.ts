@@ -1,4 +1,4 @@
-import KritterzNFTGoerli from "@web3-scaffold/contracts/deploys/goerli/KritterzNFT.json";
+import KritterzNFTGoerli from "@web3-scaffold/contracts/deploys/goerli/ExampleNFT.json";
 import { KritterzNFT__factory } from "@web3-scaffold/contracts/types";
 import { useContractRead } from "wagmi";
 
