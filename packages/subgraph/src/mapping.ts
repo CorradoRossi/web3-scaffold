@@ -1,8 +1,8 @@
-import { ExampleNFT, Transfer } from "../generated/ExampleNFT/ExampleNFT";
+import { KritterzNFT, Transfer } from "../generated/KritterzNFT/KritterzNFT";
 import { Token } from "../generated/schema";
 
 export function handleTransfer(event: Transfer): void {
-  const contract = ExampleNFT.bind(event.address);
+  const contract = KritterzNFT.bind(event.address);
 
   const token = new Token(event.params.tokenId.toString());
   token.owner = event.params.to;

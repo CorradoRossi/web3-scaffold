@@ -1,17 +1,17 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import type { NextPage } from "next";
 
-import { useExampleNFTContractRead } from "../contracts";
+import { useKritterzNFTContractRead } from "../contracts";
 import { Inventory } from "../Inventory";
 import { MintButton } from "../MintButton";
 import { useIsMounted } from "../useIsMounted";
 
 const HomePage: NextPage = () => {
-  const totalSupply = useExampleNFTContractRead({
+  const totalSupply = useKritterzNFTContractRead({
     functionName: "totalSupply",
     watch: true,
   });
-  const maxSupply = useExampleNFTContractRead({ functionName: "MAX_SUPPLY" });
+  const maxSupply = useKritterzNFTContractRead({ functionName: "MAX_SUPPLY" });
 
   const isMounted = useIsMounted();
 
@@ -21,7 +21,7 @@ const HomePage: NextPage = () => {
         <ConnectButton />
       </div>
       <div className="flex-grow flex flex-col gap-4 items-center justify-center p-8 pb-[50vh]">
-        <h1 className="text-4xl">Example NFT</h1>
+        <h1 className="text-4xl">Stoney Creek Kritterz</h1>
 
         {/* Use isMounted to temporarily workaround hydration issues where
         server-rendered markup doesn't match the client due to localStorage

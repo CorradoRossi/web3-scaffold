@@ -3,10 +3,10 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum
-    name: ExampleNFT
+    name: KritterzNFT
     network: goerli
     source:
-      abi: ExampleNFT
+      abi: KritterzNFT
       address: "0xe584409f2ba1ade9895485d90587fd46baa3c0d8"
       startBlock: 7034594
     mapping:
@@ -16,8 +16,8 @@ dataSources:
       entities:
         - NFT
       abis:
-        - name: ExampleNFT
-          file: ../contracts/out/ExampleNFT.sol/ExampleNFT.abi.json
+        - name: KritterzNFT
+          file: ../contracts/out/KritterzNFT.sol/KritterzNFT.abi.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
